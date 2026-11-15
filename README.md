@@ -65,6 +65,24 @@ http://127.0.0.1:5000
 
 To develop a centralized monitoring dashboard that helps visualize astronaut health information and spacecraft environmental conditions during space missions.
 
+---
+
+## 📸 Project Screenshots
+
+### AstraCare Dashboard
+
+![AstraCare Dashboard](dashboard.png)
+
+---
+
+## 🌐 Live Demo
+
+[Visit AstraCare](https://astronaut-health-monitor-7lam.onrender.com)
+
 👩‍💻 Author
 
 Project: AstraCare – Astronaut Health Monitor
+
+
+
+
