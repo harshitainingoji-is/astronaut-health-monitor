@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstraCare | Astronaut Health Monitor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🚀 AstraCare</h2>
+    <p class="sub">MISSION CONTROL</p>
+
+    <a class="active" href="#dashboard">▦ Dashboard</a>
+    <a href="#crew">♙ Crew Members</a>
+    <a href="#health">♡ Health Monitoring</a>
+    <a href="#environment">◎ Environment</a>
+    <a href="#alerts">⚠ Alerts</a>
+    <a href="#reports">▤ Reports</a>
+
+    <div class="mission">
+        <p>MISSION STATUS</p>
+        <h3>SPACE MISSION</h3>
+        <span>System Online</span>
+    </div>
+</div>
+
+<main>
+    <header>
+        <div>
+            <p class="sub">MISSION CONTROL / OVERVIEW</p>
+            <h1>Astronaut Health Dashboard</h1>
+            <p>Monitor crew wellness and spacecraft conditions.</p>
+        </div>
+        <div class="status">● SYSTEM ONLINE</div>
+    </header>
+
+    <section class="stats" id="dashboard">
+        <div class="card">
+            <p>Total Crew Members</p>
+            <h2>04</h2>
+            <span>Mission crew</span>
+        </div>
+        <div class="card">
+            <p>Normal Status</p>
+            <h2 class="green">03</h2>
+            <span>Within demo limits</span>
+        </div>
+        <div class="card">
+            <p>Warnings</p>
+            <h2 class="yellow">01</h2>
+            <span>Requires review</span>
+        </div>
+        <div class="card">
+            <p>Critical Alerts</p>
+            <h2 class="red">00</h2>
+            <span>Demo data</span>
+        </div>
+    </section>
+
+    <section id="crew">
+        <h2>👨‍🚀 Crew Members</h2>
+        <div class="crew-grid">
+            <div class="card crew-card">
+                <h3>👨‍🚀 Asha Rao</h3>
+                <p>Heart Rate: 72 BPM</p>
+                <p>SpO₂: 98%</p>
+                <span class="tag green-bg">Normal</span>
+            </div>
+            <div class="card crew-card">
+                <h3>👨‍🚀 Daniel Okafor</h3>
+                <p>Heart Rate: 78 BPM</p>
+                <p>SpO₂: 97%</p>
+                <span class="tag green-bg">Normal</span>
+            </div>
+            <div class="card crew-card">
+                <h3>👨‍🚀 Mei Tanaka</h3>
+                <p>Heart Rate: 75 BPM</p>
+                <p>SpO₂: 98%</p>
+                <span class="tag green-bg">Normal</span>
+            </div>
+            <div class="card crew-card">
+                <h3>👨‍🚀 Lukas Berg</h3>
+                <p>Heart Rate: 90 BPM</p>
+                <p>SpO₂: 95%</p>
+                <span class="tag yellow-bg">Warning</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="monitor-grid" id="health">
+        <div class="card">
+            <h2>Health Monitoring</h2>
+            <canvas id="healthChart"></canvas>
+        </div>
+        <div class="card" id="environment">
+            <h2>Environmental Monitoring</h2>
+            <div class="reading">
+                <span>Cabin CO₂</span><strong>3200 ppm</strong>
+            </div>
+            <div class="reading">
+                <span>Cabin Pressure</span><strong>101 kPa</strong>
+            </div>
+            <div class="reading">
+                <span>Radiation</span><strong>25 µSv/h</strong>
+            </div>
+            <div class="reading">
+                <span>Temperature</span><strong>36.8 °C</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="alerts">
+        <div class="card">
+            <h2>⚠ Recent Alerts</h2>
+            <p class="alert-item">⚠ Lukas Berg – Demo warning: health readings require review.</p>
+            <p class="normal-item">✓ Other crew members – No demo alerts.</p>
+        </div>
+    </section>
+
+    <section id="reports">
+        <div class="card">
+            <h2>Health Reports</h2>
+            <p>View the crew monitoring summary and health trends.</p>
+            <button onclick="window.print()">Download / Print Report</button>
+        </div>
+    </section>
+
+    <footer>
+        AstraCare | Astronaut Health Monitoring System
+        <p>Educational prototype – simulated data, not medical advice.</p>
+    </footer>
+</main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
