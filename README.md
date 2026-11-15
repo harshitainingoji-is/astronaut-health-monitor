@@ -75,6 +75,10 @@ To develop a centralized monitoring dashboard that helps visualize astronaut hea
 
 ---
 
+## Project Presentation
+
+[Click here to view the AstraCare PPT](./AstraCare_Presentation.pptx)
+
 ## 🌐 Live Demo
 
 [Visit AstraCare](https://astronaut-health-monitor-7lam.onrender.com)
